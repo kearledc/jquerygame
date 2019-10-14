@@ -11,7 +11,7 @@ body{
 	/*display: flex;*/
 	padding-top: 1em;
 	font-family: 'Inconsolata', serif;
-	background-image: url('../images/bg.jpg');
+	background-image: url('../images/bg4.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -74,5 +74,12 @@ header h1{
 
 .cardGame:hover{
 	border: 3px solid red;
+}
+
+@media only screen and (max-width: 430px){
+	.cardCon{
+		width: 80vw
+	}
+
 }
 
