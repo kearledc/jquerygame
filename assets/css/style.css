@@ -1,0 +1,78 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+
+body{
+	height: 100vh;
+	width: 100vw;
+	/*display: flex;*/
+	padding-top: 1em;
+	font-family: 'Inconsolata', serif;
+	background-image: url('../images/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+header h1{
+	text-align: center;
+	font-size: 3rem;
+	color: white;
+}
+
+.cardCon{
+	width: 50vw;
+	height: 70vh;
+	display: flex;
+	flex-wrap: wrap;
+	/*border: 2px solid black;*/
+	margin: auto;
+	perspective: 1000px;
+	margin-top: 2em;
+}
+
+.cardGame{
+	width: calc(25% - 10px);
+	height: calc(25% - 10px);
+	/*border: 2px solid aqua;*/
+	position: relative;
+	margin: 5px;
+	/*background-color: red;*/
+	transition: transform 0.2s;
+	border-radius: 5px;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	cursor: pointer;
+}
+
+.frontCard, .backCard{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0.1em;
+	border-radius: 5px;
+}
+	
+
+.cardGame:active{
+	transform: scale(.95);
+	transition: transform: 0.2s;
+	/*background-color: red;*/
+}
+
+.cardGame.clicked{
+	transform: rotateY(180deg);
+}
+
+.frontCard{
+	transform: rotateY(180deg);
+}
+
+.cardGame:hover{
+	border: 3px solid red;
+}
+
